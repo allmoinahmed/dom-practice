@@ -7,4 +7,4 @@ val = document.title
 val = document.links[0]
 val = document.characterSet
 val = document.forms[0]
-console.log(val);
+console.log(val); 
