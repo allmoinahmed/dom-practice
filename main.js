@@ -44,9 +44,9 @@ const firstNavElm = navElm.children[0];
 
 // Creating Element
 // <li class="first">First</li>
-const liElem = document.createElement('li')
-liElem.className = 'five'
-liElem.textContent = 'Five'
+// const liElem = document.createElement('li')
+// liElem.className = 'five'
+// liElem.textContent = 'Five'
 // navElm.appendChild(liElem)
 // navElm.prepend(liElem)
 
@@ -54,12 +54,17 @@ liElem.textContent = 'Five'
 // insertAdjacentHTML
 // insertAdjacentElement
 
-navElm.insertAdjacentElement('beforeend', liElem)
-navElm.insertAdjacentHTML('afterbegin', '<em>After Begin</em>')
+// navElm.insertAdjacentElement('beforeend', liElem)
+// navElm.insertAdjacentHTML('afterbegin', '<em>After Begin</em>')
 
 
 
-
+const NavArray = Array.from(navElm.children)
+NavArray.forEach( items => {
+    items.addEventListener('click', (e) => {
+        console.log(e);
+    })
+} )
 
 
 
