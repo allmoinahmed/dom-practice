@@ -59,15 +59,26 @@ const firstNavElm = navElm.children[0];
 
 
 
-const NavArray = Array.from(navElm.children)
-NavArray.forEach( items => {
-    items.addEventListener('click', (e) => {
-        console.log(e);
-    })
-} )
+// const NavArray = Array.from(navElm.children)
+// NavArray.forEach( (items) => {    
+//     items.addEventListener('click', (e) => {
+//         console.log(e.target.textContent); 
+//     })
+// } )
 
 
 
+navElm.addEventListener('click', (e) => {
+    if (e.target.className === 'five') {
+        console.log('You clicked ' + e.target.textContent);
+    }
+})
+
+const liEmelent = '<li class="five">Five</li>'
+navElm.insertAdjacentHTML('beforeend', liEmelent)
+
+
+// Event Delegation
 
 
 
