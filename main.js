@@ -1,10 +1,21 @@
-let val = document;
-val = document.head
-val = document.body
-val = document.all
-val = document.all[5]
-val = document.title
-val = document.links[0]
-val = document.characterSet
-val = document.forms[0]
-console.log(val); 
+// const containerIDElm = document.getElementById('container-id')
+// const containerClElm = document.getElementsByClassName('container')[0]
+// const BodyElm = document.getElementsByTagName('body')[0]
+// const BodyElm = document.querySelector('.product-collection-item')
+// const BodyElm = document.querySelectorAll('.product-collection-item')
+
+
+let value = document.getElementsByClassName('product-collection-item')
+let val = Array(value)
+// console.log(val);
+
+// val.forEach(element => {
+//    console.log(node); 
+// });
+
+for(let i = 0; i < val.length; i++) {
+    console.log(val[i]);
+}
+for (const items of val) {
+    console.log(items);
+}
