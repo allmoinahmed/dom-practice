@@ -1,25 +1,13 @@
-let ulOne = document.querySelector('.product-collection')
+const oldHeading = document.querySelector('.h1')
+const newH1 = document.createElement('h1')
+newH1.appendChild(document.createTextNode('My New Product List'))
+const container = document.querySelector('.container')
 
-let liOne = document.createElement('li')
-liOne.className = 'product-collection-item'
-liOne.appendChild(document.createTextNode('New LI'))
-ulOne.appendChild(liOne)
+// container.replaceChild(newH1, oldHeading)
+// oldHeading.replaceWith(newH1)
 
-let ulTwo = document.createElement('ul')
-ulTwo.className = 'New-Ul'
-liOne.append(ulTwo)
-
-let liTwo = document.createElement('li')
-liTwo.className = 'product-collection-item'
-liTwo.appendChild(document.createTextNode('Multi Level LI'))
-
-ulTwo.appendChild(liTwo)
-
-
-
-
-
-
-
+const list = document.querySelector('ul.product-collection')
+// list.lastElementChild.remove()
+list.removeChild(list.lastElementChild)
 
 
