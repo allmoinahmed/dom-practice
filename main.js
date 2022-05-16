@@ -1,13 +1,10 @@
-const oldHeading = document.querySelector('.h1')
-const newH1 = document.createElement('h1')
-newH1.appendChild(document.createTextNode('My New Product List'))
-const container = document.querySelector('.container')
+const h1 = document.querySelector('h1')
+h1.addEventListener('click', function(event) {
+    console.log(event)
+    console.log(event.target.innerText )
+    console.log('Click H1');
+})
 
-// container.replaceChild(newH1, oldHeading)
-// oldHeading.replaceWith(newH1)
 
-const list = document.querySelector('ul.product-collection')
-// list.lastElementChild.remove()
-list.removeChild(list.lastElementChild)
 
 
